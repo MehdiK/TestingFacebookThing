@@ -12,8 +12,11 @@
             @System.DateTime.UtcNow.ToString("u") 
         </header>
         <div id="body">
-                @RenderBody()
-                <p>Test Content</p>
+            @RenderBody()
+            <form class="edit-pizza-name-form" name="editNameForm" ng-submit="save()" ng-show="isEditing">
+                <p>Test Content inside form</p>
+                <button type="submit">Done</button>
+            </form>
         </div>
     </body>
 </html>
